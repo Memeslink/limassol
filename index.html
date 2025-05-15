@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Your Dream Property in Limassol</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x900/?limassol,real-estate') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: gold;
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      animation: build-logo 1s steps(10, end) forwards;
+      image-rendering: pixelated;
+    }
+
+    .logo-container img {
+      width: 120px;
+      height: auto;
+    }
+
+    @keyframes build-logo {
+      from {
+        clip-path: inset(100% 0 0 0);
+        opacity: 0;
+      }
+      to {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+      }
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .feature {
+      flex: 1 1 250px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: black;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .secondary-cta {
+      text-align: center;
+      background: #1a1a1a;
+      padding: 3rem 1rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      color: #aaa;
+    }
+
+    .slideshow-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="logo-container">
+      <img src="/mnt/data/logo.jpg" alt="Memes Lonk Logo" />
+    </div>
+    <h1>Find Your Dream Property in Limassol</h1>
+    <p>Exclusive listings and investment opportunities — launching soon.</p>
+  </header>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide"><img src="https://source.unsplash.com/featured/?limassol,apartment1" alt="Property 1"></div>
+    <div class="slide"><img src="https://source.unsplash.com/featured/?limassol,apartment2" alt="Property 2"></div>
+    <div class="slide"><img src="https://source.unsplash.com/featured/?limassol,apartment3" alt="Property 3"></div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const showSlides = () => {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1;}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+  </script>
+
+  <!-- Value Proposition -->
+  <section>
+    <h2 style="color: gold;">Why Invest in Limassol?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🌴 Mediterranean Lifestyle</h3>
+        <p>Enjoy sun, sea, and culture year-round in Cyprus’s premier city.</p>
+      </div>
+      <div class="feature">
+        <h3>💼 Business & Tech Hub</h3>
+        <p>Fast-growing economy with strong infrastructure and global companies.</p>
+      </div>
+      <div class="feature">
+        <h3>📈 Strong Investment</h3>
+        <p>Rising demand and limited supply make Limassol a real estate hotspot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Get -->
+  <section>
+    <h2 style="color: gold;">Be the First to Know</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>✔️ Early access to curated property listings</li>
+      <li>✔️ Personalized investment recommendations</li>
+      <li>✔️ Invitations to exclusive online tours & events</li>
+    </ul>
+  </section>
+
+  <!-- Branding / Trust -->
+  <section>
+    <h2 style="color: gold;">Who We Are</h2>
+    <p>We are a team of experienced real estate professionals committed to helping young, educated buyers find their perfect property in Limassol. Our minimalist and transparent approach keeps things simple and focused on what matters: your future home.</p>
+  </section>
+
+  <!-- Google Form Embed -->
+  <section class="secondary-cta">
+    <h2 style="color: gold;">Don’t Miss Your Chance</h2>
+    <p>Get ahead of the market and secure your spot.</p>
+    <iframe src="https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true"
+      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>We respect your privacy. No spam — just good properties. <br /> &copy; 2025 Limassol Realty Group</p>
+  </footer>
+
+</body>
+</html>
